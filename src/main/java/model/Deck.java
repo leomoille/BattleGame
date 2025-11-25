@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,8 +10,8 @@ public class Deck {
 
     public Deck() {
         this.cards = new ArrayList<PlayingCard>();
-        for(Rank rank : Rank.values()) {
-            for(Suit suit: Suit.values()) {
+        for (Rank rank : Rank.values()) {
+            for (Suit suit : Suit.values()) {
                 System.out.println("Creating card [" + rank + "][" + suit + "]");
                 cards.add(new PlayingCard(rank, suit));
             }
@@ -26,14 +28,14 @@ public class Deck {
     }
 
     public PlayingCard removeTopCard() {
-        return cards.remove(0);
+        return this.cards.removeFirst();
     }
 
     public void returnCardToDeck(PlayingCard pc) {
-        cards.add(pc);
+        this.cards.add(pc);
     }
 
     public List<PlayingCard> getCards() {
-        return cards;
+        return this.cards;
     }
 }

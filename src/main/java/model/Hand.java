@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,14 +11,14 @@ public class Hand {
     }
 
     public void addCard(PlayingCard pc) {
-        cards.add(pc);
+        this.cards.add(pc);
     }
 
     public PlayingCard getCrad(int index) {
-        return cards.get(index);
+        return this.cards.get(index);
     }
 
     public PlayingCard removeCard() {
-        return cards.remove(0);
+        return this.cards.removeFirst();
     }
 }

@@ -1,6 +1,8 @@
+package model;
+
 public class Player {
-    private String name;
-    private Hand hand;
+    private final String name;
+    private final Hand hand;
 
     public Player(String name) {
         super();
@@ -9,14 +11,14 @@ public class Player {
     }
 
     public void addCardToHand(PlayingCard pc) {
-        hand.addCard(pc);
+        this.hand.addCard(pc);
     }
 
     public PlayingCard getCard(int index) {
-        return hand.getCrad(index);
+        return this.hand.getCrad(index);
     }
 
     public PlayingCard removeCard() {
-        return hand.removeCard();
+        return this.hand.removeCard();
     }
 }

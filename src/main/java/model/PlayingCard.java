@@ -1,3 +1,5 @@
+package model;
+
 public class PlayingCard {
     private final Rank rank;
     private final Suit suit;
@@ -10,15 +12,15 @@ public class PlayingCard {
     }
 
     public Rank getRank() {
-        return rank;
+        return this.rank;
     }
 
     public Suit getSuit() {
-        return suit;
+        return this.suit;
     }
 
     public boolean isFaceUp() {
-        return faceUp;
+        return this.faceUp;
     }
 
     public boolean flip() {
