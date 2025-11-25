@@ -19,14 +19,17 @@ public class GameController {
     List<Player> players;
     Player winner;
     View view;
-    GameState gameState;
 
-    public GameController(Deck deck, View view) {
+    GameState gameState;
+    GameEvaluator gameEvaluator;
+
+    public GameController(Deck deck, View view, GameEvaluator gameEvaluator) {
         super();
         this.deck = deck;
         this.view = view;
         this.players = new ArrayList<Player>();
         this.gameState = GameState.AddingPlayers;
+        this.gameEvaluator = gameEvaluator;
         this.view.setController(this);
     }
 
@@ -77,7 +80,7 @@ public class GameController {
     }
 
     void evaluateWinner() {
-        winner = new GameEvaluator().evaluateWinner(players);
+        winner = gameEvaluator.evaluateWinner(players);
     }
 
     void displayWinner() {
