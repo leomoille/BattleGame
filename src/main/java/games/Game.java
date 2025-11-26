@@ -3,6 +3,8 @@ package games;
 import controller.GameController;
 import model.Deck;
 // import view.CommandLineView;
+import model.DeckFactory;
+import model.DeckFactory.DeckType;
 import view.GameSwingView;
 
 public class Game {
@@ -11,7 +13,7 @@ public class Game {
         GameSwingView gsv = new GameSwingView();
         gsv.createAndShowGUI();
 
-        GameController gc = new GameController(new Deck(), gsv, new LowCardGameEvaluator());
+        GameController gc = new GameController(DeckFactory.makeDeck(DeckType.Normal), gsv, new LowCardGameEvaluator());
 
         gc.run();
     }
