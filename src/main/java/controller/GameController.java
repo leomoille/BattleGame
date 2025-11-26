@@ -98,7 +98,7 @@ public class GameController {
     }
 
     public void nextAction(String nextChoice) {
-        if ("q".equals(nextChoice)) {
+        if ("+q".equals(nextChoice)) {
             exitGame();
         } else {
             startGame();
