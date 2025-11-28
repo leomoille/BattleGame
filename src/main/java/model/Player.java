@@ -1,6 +1,6 @@
 package model;
 
-public class Player {
+public class Player implements IPlayer {
     private final String name;
     private final Hand hand;
 
@@ -15,7 +15,7 @@ public class Player {
     }
 
     public PlayingCard getCard(int index) {
-        return this.hand.getCrad(index);
+        return this.hand.getCard(index);
     }
 
     public PlayingCard removeCard() {

@@ -2,9 +2,7 @@ package model;
 
 public class DeckFactory {
     public enum DeckType {
-        Normal,
-        Small,
-        Test
+        Normal, Small, Test
     }
 
     public static Deck makeDeck(DeckType type) {

@@ -15,14 +15,14 @@ public abstract class Deck {
     }
 
     public PlayingCard removeTopCard() {
-        return cards.removeFirst();
+        return this.cards.removeFirst();
     }
 
     public void returnCardToDeck(PlayingCard pc) {
-        cards.add(pc);
+        this.cards.add(pc);
     }
 
     public List<PlayingCard> getCards() {
-        return cards;
+        return this.cards;
     }
 }
