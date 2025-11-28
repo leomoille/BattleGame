@@ -8,11 +8,11 @@ import java.util.List;
 public class GameViewables implements GameViewable {
     List<GameViewable> views;
 
-    public GameViewables () {
+    public GameViewables() {
         views = new ArrayList<GameViewable>();
     }
 
-    public void addViewable (GameViewable view) {
+    public void addViewable(GameViewable view) {
         views.add(view);
     }
 
